@@ -1,0 +1,24 @@
+
+/* Smooth homepage section navigation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Offset for fixed/sticky navbar */
+#home,
+#about,
+#skills,
+#services,
+#portfolio,
+#ai-studio,
+#free-tools,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

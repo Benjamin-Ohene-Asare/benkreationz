@@ -1,0 +1,836 @@
+
+/* ==========================================
+   BEN CREATIONS - ABOUT ME
+========================================== */
+
+.ben-about {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 105px 0 115px;
+  background:
+    radial-gradient(
+      ellipse at 95% 12%,
+      rgba(185, 149, 247, 0.15),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #faf8ff 55%,
+      #f4efff 100%
+    );
+  color: #191324;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ben-about-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(22px, 5vw, 80px);
+}
+
+/* TOP SECTION LABEL */
+
+.ben-about-header {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 58px;
+}
+
+.ben-about-kicker,
+.ben-about-header-side {
+  flex-shrink: 0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.ben-about-kicker {
+  color: #7540c9;
+}
+
+.ben-about-header-side {
+  color: #91879f;
+}
+
+.ben-about-header-line {
+  flex: 1;
+  height: 1px;
+  background: #e4dced;
+}
+
+/* MAIN GRID */
+
+.ben-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 110px);
+}
+
+/* PORTRAIT */
+
+.ben-about-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.ben-about-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.7;
+  max-height: 640px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #e8def6;
+  box-shadow: 0 30px 65px rgba(47, 24, 83, 0.1);
+}
+
+.ben-about-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  transition: transform 0.9s cubic-bezier(.2,.7,.2,1);
+}
+
+.ben-about-image-frame:hover img {
+  transform: scale(1.035);
+}
+
+.ben-about-image-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(14, 9, 30, 0.68),
+    transparent 40%
+  );
+}
+
+.ben-about-image-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ben-about-image-accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 20px 24px;
+  border-radius: 6px;
+  background: #7540c9;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(117, 64, 201, 0.22);
+}
+
+.ben-about-image-accent span:first-child {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.ben-about-image-accent span:last-child {
+  font-size: 20px;
+}
+
+/* CONTENT */
+
+.ben-about-content {
+  min-width: 0;
+}
+
+.ben-about-eyebrow {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #7540c9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.ben-about-title {
+  margin: 0 0 30px;
+  font-size: clamp(42px, 4.4vw, 68px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.065em;
+}
+
+.ben-about-title em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: #8145e5;
+}
+
+.ben-about-dot {
+  color: #8145e5;
+}
+
+/* DESCRIPTION */
+
+.ben-about-description {
+  max-width: 590px;
+}
+
+.ben-about-description p {
+  margin: 0 0 18px;
+  color: #625b6b;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.ben-about-description strong {
+  color: #21142f;
+  font-weight: 700;
+}
+
+/* SPECIALIZATIONS */
+
+.ben-about-disciplines {
+  margin-top: 34px;
+  padding-top: 27px;
+  border-top: 1px solid #e6dfee;
+}
+
+.ben-about-small-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #82758e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.ben-about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ben-about-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #e3d8f0;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #553b76;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-about-tag:hover {
+  background: #f0e8ff;
+  border-color: #c7a8f5;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM ACTION */
+
+.ben-about-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.ben-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 15px 21px;
+  border-radius: 6px;
+  background: #7540c9;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ben-about-button:hover {
+  background: #8d55e5;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(117, 64, 201, 0.18);
+}
+
+.ben-about-signature {
+  color: #93869e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes benAboutReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .ben-about-visual,
+    .ben-about-content {
+      animation: benAboutReveal 0.8s ease both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 65%;
+    }
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .ben-about {
+    padding: 85px 0 95px;
+  }
+
+  .ben-about-grid {
+    gap: 45px;
+  }
+
+  .ben-about-title {
+    font-size: clamp(40px, 4.5vw, 55px);
+  }
+
+  .ben-about-description p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .ben-about-image-accent {
+    right: -12px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 720px) {
+  .ben-about {
+    padding: 65px 0 80px;
+  }
+
+  .ben-about-container {
+    padding: 0 22px;
+  }
+
+  .ben-about-header {
+    margin-bottom: 35px;
+    gap: 12px;
+  }
+
+  .ben-about-kicker {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .ben-about-header-side {
+    display: none;
+  }
+
+  .ben-about-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .ben-about-image-frame {
+    max-height: 480px;
+    aspect-ratio: 4 / 3.8;
+  }
+
+  .ben-about-image-accent {
+    bottom: -18px;
+    right: 0;
+    padding: 15px 18px;
+  }
+
+  .ben-about-title {
+    font-size: clamp(40px, 9vw, 56px);
+    line-height: 1.13;
+  }
+
+  .ben-about-eyebrow {
+    margin-bottom: 18px;
+    font-size: 10px;
+  }
+
+  .ben-about-description p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .ben-about-disciplines {
+    margin-top: 25px;
+    padding-top: 24px;
+  }
+
+  .ben-about-tag {
+    font-size: 11px;
+    padding: 9px 12px;
+  }
+
+  .ben-about-footer {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ben-about-container {
+    padding: 0 17px;
+  }
+
+  .ben-about-title {
+    font-size: 37px;
+  }
+
+  .ben-about-image-caption {
+    font-size: 8px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .ben-about-image-accent {
+    gap: 15px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .ben-about *,
+  .ben-about *::before,
+  .ben-about *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+/* ==========================================
+   BEN CREATIONS - ABOUT ME MOTION
+========================================== */
+
+/* INITIAL ANIMATION STATES */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .ben-about .ben-about-header,
+  .ben-about .ben-about-visual,
+  .ben-about .ben-about-eyebrow,
+  .ben-about .ben-about-title,
+  .ben-about .ben-about-description p,
+  .ben-about .ben-about-disciplines,
+  .ben-about .ben-about-footer {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s cubic-bezier(.2,.7,.2,1),
+      transform 0.8s cubic-bezier(.2,.7,.2,1);
+  }
+
+  /* SECTION HEADER */
+
+  .ben-about-visible .ben-about-header {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.05s;
+  }
+
+  /* PORTRAIT REVEAL */
+
+  .ben-about .ben-about-visual {
+    transform: translateX(-45px);
+  }
+
+  .ben-about-visible .ben-about-visual {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.15s;
+  }
+
+  /* CONTENT REVEAL */
+
+  .ben-about-visible .ben-about-eyebrow {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+  }
+
+  .ben-about-visible .ben-about-title {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+  }
+
+  /* PARAGRAPHS STAGGER */
+
+  .ben-about-visible .ben-about-description p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ben-about-visible .ben-about-description p:nth-child(1) {
+    transition-delay: 0.42s;
+  }
+
+  .ben-about-visible .ben-about-description p:nth-child(2) {
+    transition-delay: 0.54s;
+  }
+
+  .ben-about-visible .ben-about-description p:nth-child(3) {
+    transition-delay: 0.66s;
+  }
+
+  /* SPECIALIZATIONS */
+
+  .ben-about-visible .ben-about-disciplines {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.76s;
+  }
+
+  /* BUTTON AND SIGNATURE */
+
+  .ben-about-visible .ben-about-footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.9s;
+  }
+
+  /* TAG STAGGER */
+
+  .ben-about-tag {
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease,
+      opacity 0.5s ease;
+  }
+
+  .ben-about:not(.ben-about-visible) .ben-about-tag {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .ben-about-visible .ben-about-tag {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ben-about-visible .ben-about-tag:nth-child(1) {
+    transition-delay: 0.85s;
+  }
+
+  .ben-about-visible .ben-about-tag:nth-child(2) {
+    transition-delay: 0.95s;
+  }
+
+  .ben-about-visible .ben-about-tag:nth-child(3) {
+    transition-delay: 1.05s;
+  }
+
+  .ben-about-visible .ben-about-tag:nth-child(4) {
+    transition-delay: 1.15s;
+  }
+
+  /* SUBTLE PORTRAIT INTERACTION */
+
+  .ben-about-image-frame img {
+    transition: transform 0.9s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ben-about-image-frame:hover img {
+    transform: scale(1.045);
+  }
+
+  /* IMAGE ACCENT INTERACTION */
+
+  .ben-about-image-accent {
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .ben-about-image-accent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(117,64,201,.25);
+  }
+
+  /* BUTTON HOVER */
+
+  .ben-about-button {
+    transition:
+      background 0.25s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .ben-about-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(117,64,201,.23);
+  }
+
+  /* RESTORE TAG HOVER AFTER REVEAL */
+
+  .ben-about-visible .ben-about-tag:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ben-about .ben-about-header,
+  .ben-about .ben-about-visual,
+  .ben-about .ben-about-eyebrow,
+  .ben-about .ben-about-title,
+  .ben-about .ben-about-description p,
+  .ben-about .ben-about-disciplines,
+  .ben-about .ben-about-footer,
+  .ben-about .ben-about-tag {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}
+
+
+
+/* ==========================================
+   ABOUT ME - CINEMATIC IMAGE ANIMATION
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Portrait frame enters from the left */
+  .ben-about .ben-about-visual {
+    opacity: 0;
+    transform: translateX(-65px) translateY(20px);
+    transition:
+      opacity 1s cubic-bezier(.16, 1, .3, 1),
+      transform 1.1s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .ben-about.ben-about-visible .ben-about-visual {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    transition-delay: .12s;
+  }
+
+  /* Actual photograph: zoom out + blur reveal */
+  .ben-about .ben-about-image-frame img {
+    opacity: 0;
+    transform: scale(1.18);
+    filter: blur(9px);
+    transition:
+      opacity 1.15s ease,
+      transform 1.8s cubic-bezier(.16, 1, .3, 1),
+      filter 1.4s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-frame img {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+    transition-delay: .25s;
+  }
+
+  /* Purple accent card pops into place */
+  .ben-about .ben-about-image-accent {
+    opacity: 0;
+    transform: translateY(30px) scale(.92);
+    transition:
+      opacity .7s ease,
+      transform .85s cubic-bezier(.16, 1, .3, 1),
+      box-shadow .3s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-accent {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: .9s;
+  }
+
+  /* Image caption appears last */
+  .ben-about .ben-about-image-caption {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity .7s ease,
+      transform .7s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-caption {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+  }
+
+  /* Gentle image hover after entrance */
+  .ben-about.ben-about-visible .ben-about-image-frame:hover img {
+    transform: scale(1.045);
+    transition-delay: 0s;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-accent:hover {
+    transform: translateY(-5px) scale(1);
+    transition-delay: 0s;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .ben-about .ben-about-visual,
+  .ben-about .ben-about-image-frame img,
+  .ben-about .ben-about-image-accent,
+  .ben-about .ben-about-image-caption {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ==========================================
+   ABOUT ME - CINEMATIC IMAGE ANIMATION
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Portrait frame enters from the left */
+  .ben-about .ben-about-visual {
+    opacity: 0;
+    transform: translateX(-65px) translateY(20px);
+    transition:
+      opacity 1s cubic-bezier(.16, 1, .3, 1),
+      transform 1.1s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .ben-about.ben-about-visible .ben-about-visual {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    transition-delay: .12s;
+  }
+
+  /* Actual photograph: zoom out + blur reveal */
+  .ben-about .ben-about-image-frame img {
+    opacity: 0;
+    transform: scale(1.18);
+    filter: blur(9px);
+    transition:
+      opacity 1.15s ease,
+      transform 1.8s cubic-bezier(.16, 1, .3, 1),
+      filter 1.4s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-frame img {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+    transition-delay: .25s;
+  }
+
+  /* Purple accent card pops into place */
+  .ben-about .ben-about-image-accent {
+    opacity: 0;
+    transform: translateY(30px) scale(.92);
+    transition:
+      opacity .7s ease,
+      transform .85s cubic-bezier(.16, 1, .3, 1),
+      box-shadow .3s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-accent {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: .9s;
+  }
+
+  /* Image caption appears last */
+  .ben-about .ben-about-image-caption {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity .7s ease,
+      transform .7s ease;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-caption {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 1s;
+  }
+
+  /* Gentle image hover after entrance */
+  .ben-about.ben-about-visible .ben-about-image-frame:hover img {
+    transform: scale(1.045);
+    transition-delay: 0s;
+  }
+
+  .ben-about.ben-about-visible .ben-about-image-accent:hover {
+    transform: translateY(-5px) scale(1);
+    transition-delay: 0s;
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .ben-about .ben-about-visual,
+  .ben-about .ben-about-image-frame img,
+  .ben-about .ben-about-image-accent,
+  .ben-about .ben-about-image-caption {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+    transition: none;
+  }
+}

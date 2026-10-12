@@ -1,0 +1,809 @@
+/* ==========================================
+   BEN CREATIONS - CREATIVE PORTFOLIO
+========================================== */
+
+.ben-portfolio {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0 90px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(173, 131, 232, 0.1),
+      transparent 55%
+    ),
+    #faf8fd;
+
+  color: #241630;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ben-portfolio,
+.ben-portfolio * {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   CONTAINER - MORE SPACE FROM EDGES
+========================================== */
+
+.ben-portfolio-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(35px, 5.5vw, 90px);
+}
+
+/* ==========================================
+   TOPLINE
+========================================== */
+
+.ben-portfolio-topline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 65px;
+
+  color: #8050c2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ben-portfolio-rule {
+  flex: 1;
+  height: 1px;
+  background: #e5dced;
+}
+
+.ben-portfolio-topline span:last-child {
+  color: #9b8da7;
+}
+
+/* ==========================================
+   CENTERED HEADING
+========================================== */
+
+.ben-portfolio-heading-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.ben-portfolio-eyebrow {
+  margin: 0 0 17px;
+  color: #8050c2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+
+.ben-portfolio-title {
+  margin: 0;
+  color: #241630;
+
+  font-size: clamp(48px, 6vw, 82px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.07em;
+}
+
+.ben-portfolio-title em {
+  color: #8955d5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.ben-portfolio-intro {
+  max-width: 580px;
+  margin: 23px auto 0;
+
+  color: #74697d;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* ==========================================
+   CATEGORY FILTER TABS
+========================================== */
+
+.ben-portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 42px;
+}
+
+.ben-portfolio-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 11px 18px;
+
+  border: 1px solid #e2d9eb;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #685777;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-portfolio-tab:hover {
+  border-color: #ae8ade;
+  color: #7440c1;
+  transform: translateY(-2px);
+}
+
+.ben-portfolio-tab.active {
+  background: #7040ba;
+  border-color: #7040ba;
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 16px rgba(112, 64, 186, 0.18);
+}
+
+/* ==========================================
+   FIVE-COLUMN GRID
+========================================== */
+
+.ben-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  align-items: start;
+  gap: 30px 18px;
+
+  width: 100%;
+}
+
+/* ==========================================
+   PROJECT CARD
+========================================== */
+
+.ben-portfolio-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.ben-portfolio-image {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  border: 1px solid #e9e1f0;
+  border-radius: 10px;
+
+  background: #f0eaf6;
+
+  box-shadow:
+    0 4px 15px rgba(44, 21, 71, 0.04);
+
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ben-portfolio-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.ben-portfolio-card:hover .ben-portfolio-image {
+  transform: translateY(-5px);
+  border-color: #c9a8f1;
+
+  box-shadow:
+    0 16px 35px rgba(67, 29, 112, 0.12);
+}
+
+.ben-portfolio-card:hover img {
+  transform: scale(1.035);
+}
+
+/* ==========================================
+   IMAGE OVERLAY
+========================================== */
+
+.ben-portfolio-image-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 18px;
+
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(18, 9, 36, 0.78) 100%
+  );
+
+  color: #ffffff;
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.ben-portfolio-card:hover
+.ben-portfolio-image-overlay,
+.ben-portfolio-card:focus-visible
+.ben-portfolio-image-overlay {
+  opacity: 1;
+}
+
+.ben-portfolio-image-overlay span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.ben-portfolio-image-overlay svg {
+  font-size: 20px;
+}
+
+/* ==========================================
+   PROJECT CAPTION
+========================================== */
+
+.ben-portfolio-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 13px 2px 0;
+}
+
+.ben-portfolio-card-info span:first-child {
+  color: #30213d;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ben-portfolio-card-info span:last-child {
+  color: #8e7c9e;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* ==========================================
+   EMPTY CATEGORY
+========================================== */
+
+.ben-portfolio-empty {
+  padding: 55px 0;
+  color: #8e7c9e;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ==========================================
+   CENTERED SEE MORE BUTTON
+========================================== */
+
+.ben-portfolio-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ben-portfolio-more-count {
+  color: #9b8ba8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.ben-portfolio-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  min-height: 52px;
+  padding: 15px 27px;
+
+  border: 1px solid #7040ba;
+  border-radius: 7px;
+
+  background: #7040ba;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 24px rgba(112, 64, 186, 0.17);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ben-portfolio-more-button:not(:disabled) {
+  cursor: pointer;
+}
+
+.ben-portfolio-more-button:not(:disabled):hover {
+  background: #8955d5;
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 28px rgba(112, 64, 186, 0.22);
+}
+
+.ben-portfolio-more-button:disabled {
+  opacity: 0.78;
+  cursor: not-allowed;
+}
+
+.ben-portfolio-more-button svg {
+  font-size: 18px;
+}
+
+.ben-portfolio-coming-soon {
+  color: #a292af;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+/* ==========================================
+   BOTTOM FOOTER
+========================================== */
+
+.ben-portfolio-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 65px;
+  padding-top: 24px;
+
+  border-top: 1px solid #e5dced;
+
+  color: #9a8ba6;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+/* ==========================================
+   FULLSCREEN LIGHTBOX
+========================================== */
+
+.ben-portfolio-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(9, 5, 19, 0.94);
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.ben-portfolio-lightbox-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ben-portfolio-lightbox-content img {
+  display: block;
+  width: auto;
+  height: auto;
+
+  max-width: min(900px, 85vw);
+  max-height: 78vh;
+
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.ben-portfolio-close,
+.ben-portfolio-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-portfolio-close:hover,
+.ben-portfolio-nav:hover {
+  background: rgba(169, 120, 237, 0.35);
+}
+
+.ben-portfolio-close {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  font-size: 22px;
+}
+
+.ben-portfolio-nav {
+  position: fixed;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  font-size: 25px;
+  transform: translateY(-50%);
+}
+
+.ben-portfolio-nav.previous {
+  left: 22px;
+}
+
+.ben-portfolio-nav.next {
+  right: 22px;
+}
+
+.ben-portfolio-lightbox-caption {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: 18px;
+
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.ben-portfolio-lightbox-caption span:last-child {
+  color: #c9a7ff;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.ben-portfolio-tab:focus-visible,
+.ben-portfolio-card:focus-visible,
+.ben-portfolio-more-button:focus-visible,
+.ben-portfolio-lightbox button:focus-visible {
+  outline: 3px solid #a77bea;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   SCROLL ANIMATIONS
+========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .ben-portfolio .ben-portfolio-topline,
+  .ben-portfolio .ben-portfolio-heading-row,
+  .ben-portfolio .ben-portfolio-tabs,
+  .ben-portfolio .ben-portfolio-bottom,
+  .ben-portfolio .ben-portfolio-more {
+    opacity: 0;
+    transform: translateY(28px);
+
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .ben-portfolio-visible .ben-portfolio-topline,
+  .ben-portfolio-visible .ben-portfolio-heading-row,
+  .ben-portfolio-visible .ben-portfolio-tabs,
+  .ben-portfolio-visible .ben-portfolio-bottom,
+  .ben-portfolio-visible .ben-portfolio-more {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ben-portfolio-visible .ben-portfolio-heading-row {
+    transition-delay: 0.1s;
+  }
+
+  .ben-portfolio-visible .ben-portfolio-tabs {
+    transition-delay: 0.2s;
+  }
+
+  .ben-portfolio-visible .ben-portfolio-more {
+    transition-delay: 0.25s;
+  }
+
+  .ben-portfolio-visible .ben-portfolio-bottom {
+    transition-delay: 0.3s;
+  }
+
+  .ben-portfolio-visible .ben-portfolio-card {
+    animation: benPortfolioReveal 0.6s both;
+    animation-delay: calc(var(--card-index) * 0.035s);
+  }
+
+  @keyframes benPortfolioReveal {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ==========================================
+   MEDIUM DESKTOP
+========================================== */
+
+@media (max-width: 1200px) {
+  .ben-portfolio-container {
+    padding: 0 45px;
+  }
+
+  .ben-portfolio-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 27px 16px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .ben-portfolio-container {
+    padding: 0 35px;
+  }
+
+  .ben-portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 15px;
+  }
+
+  .ben-portfolio-title {
+    font-size: clamp(48px, 8vw, 75px);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 680px) {
+  .ben-portfolio {
+    padding: 70px 0 65px;
+  }
+
+  .ben-portfolio-container {
+    padding: 0 20px;
+  }
+
+  .ben-portfolio-topline {
+    gap: 10px;
+    margin-bottom: 40px;
+    font-size: 9px;
+  }
+
+  .ben-portfolio-topline span:last-child {
+    display: none;
+  }
+
+  .ben-portfolio-heading-row {
+    margin-bottom: 32px;
+  }
+
+  .ben-portfolio-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .ben-portfolio-title {
+    font-size: clamp(42px, 10vw, 60px);
+  }
+
+  .ben-portfolio-intro {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* MOBILE CATEGORY TABS */
+
+.ben-portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  gap: 9px;
+
+  margin: 0 0 32px;
+  padding: 0;
+
+  overflow: visible;
+}
+
+.ben-portfolio-tab {
+  flex: 0 1 auto;
+
+  min-height: 40px;
+  padding: 10px 13px;
+
+  font-size: 11px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+  .ben-portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px 12px;
+  }
+
+  .ben-portfolio-image {
+    border-radius: 8px;
+  }
+
+  .ben-portfolio-card-info {
+    padding-top: 10px;
+  }
+
+  .ben-portfolio-card-info span:first-child {
+    font-size: 11px;
+  }
+
+  .ben-portfolio-card-info span:last-child {
+    font-size: 9px;
+  }
+
+  .ben-portfolio-more {
+    margin-top: 45px;
+  }
+
+  .ben-portfolio-more-button {
+    padding: 14px 22px;
+  }
+
+  .ben-portfolio-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+    margin-top: 45px;
+  }
+
+  .ben-portfolio-lightbox {
+    padding: 15px;
+  }
+
+  .ben-portfolio-lightbox-content img {
+    max-width: 88vw;
+    max-height: 72vh;
+  }
+
+  .ben-portfolio-nav {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .ben-portfolio-nav.previous {
+    left: 5px;
+  }
+
+  .ben-portfolio-nav.next {
+    right: 5px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .ben-portfolio-container {
+    padding: 0 16px;
+  }
+
+  .ben-portfolio-title {
+    font-size: 40px;
+  }
+
+  .ben-portfolio-grid {
+    gap: 20px 10px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ben-portfolio *,
+  .ben-portfolio *::before,
+  .ben-portfolio *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

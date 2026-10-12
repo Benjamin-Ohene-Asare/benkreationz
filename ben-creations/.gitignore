@@ -1,0 +1,38 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Django local database and uploads
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Node dependencies
+node_modules/
+
+# Frontend build output
+dist/
+build/
+
+# Vercel local settings
+.vercel/
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

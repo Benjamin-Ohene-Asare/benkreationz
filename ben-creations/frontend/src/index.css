@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* ==========================================
+   BEN CREATIONS — GLOBAL TYPOGRAPHY
+========================================== */
+
+:root {
+  --font-body: "Poppins", sans-serif;
+}
+
+/* Keep existing heading typography */
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Paragraphs */
+
+p {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Smaller text */
+
+span,
+small,
+label,
+li,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+/* Buttons and navigation */
+
+button,
+nav a {
+  font-weight: 500;
+}
+
+/* Form elements */
+
+input,
+textarea,
+select {
+  font-weight: 400;
+}
+
+/* Preserve heading fonts */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}

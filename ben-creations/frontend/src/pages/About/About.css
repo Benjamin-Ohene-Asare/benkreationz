@@ -1,0 +1,1145 @@
+
+/* ==========================================
+   BEN CREATIONS — ABOUT PAGE
+========================================== */
+
+.bc-about-page {
+  min-height: 100vh;
+  padding: 135px 24px 100px;
+  background:
+    radial-gradient(
+      circle at 5% 8%,
+      rgba(145, 94, 223, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #fbf9ff 0%,
+      #ffffff 35%,
+      #fbf9ff 100%
+    );
+  color: #24172f;
+  font-family: "Poppins", sans-serif;
+}
+
+.bc-about-page *,
+.bc-about-page *::before,
+.bc-about-page *::after {
+  box-sizing: border-box;
+}
+
+.bc-about-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.bc-about-page img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================
+   SHARED TYPOGRAPHY
+========================================== */
+
+.bc-about-eyebrow,
+.bc-about-section-kicker {
+  display: inline-block;
+  color: #8650ce;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.bc-about-section-kicker {
+  margin-bottom: 14px;
+}
+
+.bc-about-section-heading {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.bc-about-section-heading h2 {
+  margin: 0;
+  color: #281735;
+  font-size: clamp(29px, 3.6vw, 43px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+}
+
+.bc-about-section-heading h2 span {
+  color: #8750ce;
+}
+
+.bc-about-section-heading > p {
+  max-width: 620px;
+  margin: 15px 0 0;
+  color: #766d80;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.bc-about-section {
+  padding: 75px 0;
+  border-top: 1px solid #eee8f4;
+}
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.bc-about-intro {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(0, 0.75fr);
+  align-items: center;
+  gap: 70px;
+  padding-bottom: 95px;
+}
+
+.bc-about-intro-copy {
+  min-width: 0;
+}
+
+.bc-about-eyebrow {
+  margin-bottom: 20px;
+}
+
+.bc-about-intro h1 {
+  max-width: 700px;
+  margin: 0 0 20px;
+  color: #231331;
+  font-size: clamp(37px, 4.7vw, 62px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2.5px;
+}
+
+.bc-about-intro h1 span {
+  color: #8950d6;
+}
+
+.bc-about-lead {
+  max-width: 610px;
+  margin: 0 0 18px;
+  color: #42304f;
+  font-size: clamp(16px, 1.7vw, 20px);
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.bc-about-summary {
+  max-width: 650px;
+  margin: 0;
+  color: #70677b;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* ==========================================
+   INTRO BUTTONS
+========================================== */
+
+.bc-about-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.bc-about-primary-button,
+.bc-about-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 49px;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bc-about-primary-button {
+  background: linear-gradient(
+    135deg,
+    #9458df,
+    #7136be
+  );
+  color: #ffffff;
+  box-shadow:
+    0 8px 22px rgba(126, 68, 203, 0.17);
+}
+
+.bc-about-primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 27px rgba(126, 68, 203, 0.25);
+}
+
+.bc-about-secondary-button {
+  border: 1px solid #ded2eb;
+  background: #ffffff;
+  color: #6f3eb5;
+}
+
+.bc-about-secondary-button:hover {
+  background: #f5efff;
+  transform: translateY(-2px);
+}
+
+.bc-about-quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 31px;
+}
+
+.bc-about-quick-facts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #756c7e;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.bc-about-quick-facts svg {
+  flex-shrink: 0;
+  color: #8d52d5;
+}
+
+/* ==========================================
+   PORTRAIT
+========================================== */
+
+.bc-about-portrait-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 410px;
+  min-width: 0;
+  margin-left: auto;
+}
+
+.bc-about-portrait-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 24px -17px -17px 24px;
+  border: 1px solid rgba(144, 90, 219, 0.28);
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+.bc-about-portrait {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 4.8;
+  border-radius: 22px;
+  background: #e8ddf4;
+  box-shadow:
+    0 22px 60px rgba(48, 24, 78, 0.13);
+}
+
+.bc-about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.bc-about-portrait-caption {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  bottom: 17px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 11px;
+  background: rgba(29, 15, 45, 0.82);
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+}
+
+.bc-about-portrait-caption span:first-child {
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+}
+
+.bc-about-portrait-caption span:last-child {
+  color: #d8c2ef;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+/* ==========================================
+   MY BACKGROUND
+========================================== */
+
+.bc-about-story {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
+  gap: 75px;
+}
+
+.bc-about-story-copy p {
+  margin: 0 0 17px;
+  color: #6f657a;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.bc-about-story-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   STRENGTH CARDS
+========================================== */
+
+.bc-about-strength-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.bc-about-strength-card {
+  padding: 30px 26px;
+  border: 1px solid #ece5f3;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow:
+    0 10px 35px rgba(49, 23, 76, 0.035);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bc-about-strength-card:hover {
+  transform: translateY(-4px);
+  border-color: #d8c2f0;
+  box-shadow:
+    0 17px 42px rgba(49, 23, 76, 0.08);
+}
+
+.bc-about-strength-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 51px;
+  margin-bottom: 25px;
+  border-radius: 13px;
+  background: #f1e8fd;
+  color: #8249cb;
+}
+
+.bc-about-strength-card h3 {
+  margin: 0 0 12px;
+  color: #2c1b39;
+  font-size: 16px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.bc-about-strength-card p {
+  margin: 0;
+  color: #786e81;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   PROJECT EXPERIENCE
+========================================== */
+
+.bc-about-experience-list {
+  overflow: hidden;
+  border: 1px solid #ebe4f2;
+  border-radius: 19px;
+  background: #ffffff;
+}
+
+.bc-about-experience-item {
+  display: grid;
+  grid-template-columns:
+    56px minmax(0, 1fr) 28px;
+  align-items: start;
+  gap: 23px;
+  padding: 29px 33px;
+}
+
+.bc-about-experience-item
++ .bc-about-experience-item {
+  border-top: 1px solid #f0eaf5;
+}
+
+.bc-about-experience-number {
+  padding-top: 4px;
+  color: #a487c3;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.bc-about-experience-role {
+  display: block;
+  margin-bottom: 7px;
+  color: #8750d1;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.bc-about-experience-content h3 {
+  margin: 0 0 9px;
+  color: #2a1938;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.bc-about-experience-content > p {
+  max-width: 760px;
+  margin: 0;
+  color: #766c80;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.bc-about-experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.bc-about-experience-tags span {
+  padding: 7px 11px;
+  border: 1px solid #ece3f6;
+  border-radius: 7px;
+  background: #f8f4fd;
+  color: #77519b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.bc-about-experience-symbol {
+  color: #b69bcf;
+}
+
+/* ==========================================
+   EDUCATION WITH GRADUATION IMAGE
+========================================== */
+
+.bc-about-education-feature {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.15fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+.bc-about-education-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  border-radius: 20px;
+  background: #e7ddef;
+  box-shadow:
+    0 16px 45px rgba(48, 24, 78, 0.09);
+}
+
+.bc-about-education-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(21, 12, 35, 0.68) 100%
+  );
+  pointer-events: none;
+}
+
+.bc-about-education-photo img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.5s ease;
+}
+
+.bc-about-education-photo:hover img {
+  transform: scale(1.035);
+}
+
+.bc-about-photo-label {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: calc(100% - 40px);
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(31, 17, 47, 0.76);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.bc-about-photo-label span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.bc-about-education-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+
+.bc-about-education-highlight {
+  flex: 1;
+  padding: 30px;
+  border: 1px solid #eae0f5;
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      #f5efff,
+      #ffffff
+    );
+}
+
+.bc-about-highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: #e9dcfa;
+  color: #7c43c8;
+}
+
+.bc-about-education-highlight > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #8957c8;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+.bc-about-education-highlight h3 {
+  max-width: 440px;
+  margin: 0 0 13px;
+  color: #2b193b;
+  font-size: clamp(21px, 2.3vw, 28px);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.7px;
+}
+
+.bc-about-education-highlight p {
+  margin: 0;
+  color: #766a82;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.bc-about-education-mini-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 21px 23px;
+  border: 1px solid #ece5f3;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+.bc-about-education-mini-card > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #8950d2;
+}
+
+.bc-about-education-mini-card > div {
+  min-width: 0;
+}
+
+.bc-about-education-mini-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #9565c7;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.bc-about-education-mini-card h4 {
+  margin: 0 0 5px;
+  color: #2e1d3c;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.bc-about-education-mini-card p {
+  margin: 0;
+  color: #756b7e;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+.bc-about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bc-about-skills span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 11px 17px;
+  border: 1px solid #e8def2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #554365;
+  font-size: 12px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.bc-about-skills span:hover {
+  border-color: #b994e6;
+  background: #f4ecff;
+  color: #763fbe;
+}
+
+/* ==========================================
+   PERSONAL INTEREST — KEYBOARD PHOTO
+========================================== */
+
+.bc-about-personal-feature {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  align-items: stretch;
+  gap: 25px;
+}
+
+.bc-about-personal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 38px;
+  border: 1px solid #eae2f3;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.bc-about-personal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  background: #f0e6fd;
+  color: #8248ca;
+}
+
+.bc-about-personal-eyebrow {
+  margin-bottom: 13px;
+  color: #8751cb;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.4px;
+}
+
+.bc-about-personal-content h3 {
+  margin: 0 0 20px;
+  color: #291839;
+  font-size: clamp(26px, 3vw, 35px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.bc-about-personal-content > p {
+  margin: 0 0 16px;
+  color: #746a7e;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.bc-about-personal-signature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+  color: #8351bb;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.7;
+}
+
+.bc-about-personal-signature svg {
+  flex-shrink: 0;
+}
+
+.bc-about-keyboard-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 430px;
+  border-radius: 20px;
+  background: #ddd3e8;
+  box-shadow:
+    0 16px 45px rgba(48, 24, 78, 0.09);
+}
+
+.bc-about-keyboard-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 60%,
+    rgba(20, 11, 34, 0.7)
+  );
+  pointer-events: none;
+}
+
+.bc-about-keyboard-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.5s ease;
+}
+
+.bc-about-keyboard-photo:hover img {
+  transform: scale(1.035);
+}
+
+.bc-about-keyboard-caption {
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: calc(100% - 40px);
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background: rgba(28, 16, 44, 0.76);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.bc-about-keyboard-caption span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   VISION
+========================================== */
+
+.bc-about-vision {
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  padding: 60px 45px;
+  border-radius: 23px;
+  background: linear-gradient(
+    135deg,
+    #382052 0%,
+    #21102f 100%
+  );
+  color: #ffffff;
+  text-align: center;
+}
+
+.bc-about-vision::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background: rgba(174, 112, 242, 0.12);
+  pointer-events: none;
+}
+
+.bc-about-vision > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bc-about-vision-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(221, 186, 255, 0.3);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #d3adff;
+}
+
+.bc-about-vision .bc-about-section-kicker {
+  color: #d0a6ff;
+}
+
+.bc-about-vision h2 {
+  margin: 4px 0 18px;
+  color: #ffffff;
+  font-size: clamp(28px, 3.7vw, 44px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -1.4px;
+}
+
+.bc-about-vision h2 span {
+  color: #c69af6;
+}
+
+.bc-about-vision > p {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #d2c3df;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.bc-about-vision > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 49px;
+  margin-top: 31px;
+  padding: 13px 25px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #6b37ae;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.bc-about-vision > a:hover {
+  transform: translateY(-2px);
+  background: #f0e6ff;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.bc-about-page a:focus-visible {
+  outline: 3px solid #a36ce8;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .bc-about-intro {
+    gap: 40px;
+  }
+
+  .bc-about-story {
+    gap: 40px;
+  }
+
+  .bc-about-education-feature {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .bc-about-education-photo {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 800px) {
+  .bc-about-page {
+    padding: 115px 22px 80px;
+  }
+
+  .bc-about-intro {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-bottom: 75px;
+  }
+
+  .bc-about-portrait-wrap {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .bc-about-story {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .bc-about-strength-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-about-education-feature,
+  .bc-about-personal-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-about-education-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .bc-about-keyboard-photo {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .bc-about-section {
+    padding: 60px 0;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 560px) {
+  .bc-about-page {
+    padding: 105px 16px 65px;
+  }
+
+  .bc-about-eyebrow,
+  .bc-about-section-kicker {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .bc-about-intro {
+    gap: 35px;
+    padding-bottom: 60px;
+  }
+
+  .bc-about-intro h1 {
+    font-size: 36px;
+    letter-spacing: -1.4px;
+  }
+
+  .bc-about-lead {
+    font-size: 15px;
+  }
+
+  .bc-about-summary {
+    font-size: 12px;
+  }
+
+  .bc-about-intro-actions {
+    gap: 10px;
+  }
+
+  .bc-about-primary-button,
+  .bc-about-secondary-button {
+    flex: 1 1 auto;
+    padding: 12px 15px;
+    font-size: 11px;
+  }
+
+  .bc-about-portrait-wrap {
+    max-width: 330px;
+  }
+
+  .bc-about-portrait-wrap::before {
+    inset: 15px -8px -8px 15px;
+  }
+
+  .bc-about-section {
+    padding: 48px 0;
+  }
+
+  .bc-about-section-heading h2 {
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+
+  .bc-about-section-heading > p,
+  .bc-about-story-copy p {
+    font-size: 12px;
+  }
+
+  .bc-about-strength-card {
+    padding: 25px;
+  }
+
+  .bc-about-experience-item {
+    grid-template-columns:
+      34px minmax(0, 1fr);
+    gap: 12px;
+    padding: 23px 17px;
+  }
+
+  .bc-about-experience-symbol {
+    display: none;
+  }
+
+  .bc-about-experience-content h3 {
+    font-size: 17px;
+  }
+
+  .bc-about-education-feature,
+  .bc-about-personal-feature {
+    gap: 16px;
+  }
+
+  .bc-about-education-photo {
+    aspect-ratio: 4 / 4.3;
+    border-radius: 16px;
+  }
+
+  .bc-about-keyboard-photo {
+    aspect-ratio: 4 / 3.4;
+    border-radius: 16px;
+  }
+
+  .bc-about-education-highlight {
+    padding: 24px 20px;
+  }
+
+  .bc-about-education-highlight h3 {
+    font-size: 22px;
+  }
+
+  .bc-about-education-mini-card {
+    padding: 18px 16px;
+  }
+
+  .bc-about-education-mini-card h4 {
+    font-size: 15px;
+  }
+
+  .bc-about-personal-content {
+    padding: 27px 21px;
+    border-radius: 16px;
+  }
+
+  .bc-about-personal-content h3 {
+    font-size: 28px;
+  }
+
+  .bc-about-skills {
+    gap: 9px;
+  }
+
+  .bc-about-skills span {
+    min-height: 39px;
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .bc-about-photo-label,
+  .bc-about-keyboard-caption {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    padding: 10px 12px;
+  }
+
+  .bc-about-photo-label span,
+  .bc-about-keyboard-caption span {
+    font-size: 9px;
+  }
+
+  .bc-about-vision {
+    margin-top: 10px;
+    padding: 43px 22px;
+    border-radius: 17px;
+  }
+
+  .bc-about-vision h2 {
+    font-size: 28px;
+  }
+
+  .bc-about-vision > p {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .bc-about-page *,
+  .bc-about-page *::before,
+  .bc-about-page *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

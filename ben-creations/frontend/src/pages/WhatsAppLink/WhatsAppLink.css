@@ -1,0 +1,677 @@
+
+/* =========================================
+   BEN CREATIONS — WHATSAPP LINK GENERATOR
+========================================= */
+
+.wa-tool-page {
+  min-height: 100vh;
+  padding: 110px 0 100px;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 92, 246, 0.09),
+      transparent 32%
+    ),
+    linear-gradient(180deg, #faf9ff 0%, #ffffff 100%);
+  color: #1d1734;
+}
+
+.wa-tool-page,
+.wa-tool-page * {
+  box-sizing: border-box;
+}
+
+.wa-tool-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5.5vw, 90px);
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.wa-tool-header {
+  max-width: 740px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.wa-tool-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #7547d7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.wa-tool-header h1 {
+  margin: 0 0 18px;
+  color: #201637;
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.2px;
+}
+
+.wa-tool-header h1 em {
+  color: #8050dc;
+  font-weight: inherit;
+}
+
+.wa-tool-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #756e83;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.wa-tool-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* =========================================
+   GENERATOR CARD
+========================================= */
+
+.wa-tool-card {
+  min-width: 0;
+  padding: 36px;
+  background: #ffffff;
+  border: 1px solid #eee9f7;
+  border-radius: 22px;
+  box-shadow: 0 16px 50px rgba(42, 24, 80, 0.055);
+}
+
+.wa-tool-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.wa-tool-icon {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  align-items: center;
+  justify-content: center;
+  color: #7746d4;
+  background: #f1eafd;
+  border-radius: 15px;
+}
+
+.wa-tool-card-heading h2 {
+  margin: 0 0 5px;
+  color: #201637;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+}
+
+.wa-tool-card-heading p {
+  margin: 0;
+  color: #827b8d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.wa-tool-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wa-tool-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.wa-tool-field > label,
+.wa-tool-result-content > label {
+  color: #302542;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wa-tool-field > label span {
+  color: #968da4;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.wa-tool-field select,
+.wa-tool-field input,
+.wa-tool-field textarea,
+.wa-tool-result-content input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e7e1ef;
+  border-radius: 11px;
+  outline: none;
+  background: #fcfbff;
+  color: #2a2039;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.wa-tool-field select,
+.wa-tool-field input {
+  height: 51px;
+  padding: 0 15px;
+}
+
+.wa-tool-field select {
+  cursor: pointer;
+}
+
+.wa-tool-field textarea {
+  display: block;
+  min-height: 136px;
+  padding: 15px;
+  line-height: 1.8;
+  resize: vertical;
+}
+
+.wa-tool-field input::placeholder,
+.wa-tool-field textarea::placeholder {
+  color: #a69eaf;
+}
+
+.wa-tool-field select:focus,
+.wa-tool-field input:focus,
+.wa-tool-field textarea:focus,
+.wa-tool-result-content input:focus {
+  border-color: #9367e5;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(147, 103, 229, 0.11);
+}
+
+.wa-tool-input-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.wa-tool-input-wrap > svg {
+  position: absolute;
+  left: 16px;
+  z-index: 1;
+  color: #9b8cab;
+  pointer-events: none;
+}
+
+.wa-tool-input-wrap input {
+  padding-left: 47px;
+}
+
+.wa-tool-field small {
+  color: #9991a4;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.wa-tool-error {
+  margin: 0;
+  padding: 12px 14px;
+  color: #ae3447;
+  background: #fff0f2;
+  border: 1px solid #ffdce2;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.wa-tool-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.wa-tool-generate,
+.wa-tool-reset,
+.wa-tool-copy,
+.wa-tool-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.wa-tool-generate {
+  flex: 1;
+  min-height: 53px;
+  padding: 12px 18px;
+  color: #ffffff;
+  background: #7544d2;
+  border: 1px solid #7544d2;
+  border-radius: 11px;
+}
+
+.wa-tool-generate:hover {
+  background: #6435bd;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(117, 68, 210, 0.2);
+}
+
+.wa-tool-reset {
+  width: 53px;
+  min-width: 53px;
+  min-height: 53px;
+  color: #735b91;
+  background: #f6f2fc;
+  border: 1px solid #eae2f5;
+  border-radius: 11px;
+}
+
+.wa-tool-reset:hover {
+  color: #7544d2;
+  background: #eee5fb;
+}
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.wa-tool-result-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 36px;
+  background: linear-gradient(
+    145deg,
+    #241438 0%,
+    #352052 55%,
+    #48296f 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(35, 20, 56, 0.14);
+}
+
+.wa-tool-result-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 38px;
+}
+
+.wa-tool-result-label {
+  color: #c9b1ef;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.wa-tool-result-icon {
+  display: flex;
+  width: 43px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  color: #e4d4ff;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.wa-tool-result-card > h2 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: clamp(25px, 2.4vw, 33px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+
+.wa-tool-result-card > p {
+  max-width: 340px;
+  margin: 0 0 28px;
+  color: #c8bad8;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   EMPTY RESULT
+========================================= */
+
+.wa-tool-empty-state {
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 25px;
+  color: #d7c3f2;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px dashed rgba(224, 201, 255, 0.25);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.wa-tool-empty-state > svg {
+  color: #d5b8ff;
+}
+
+.wa-tool-empty-state span {
+  max-width: 240px;
+  color: #c6b6d9;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   GENERATED RESULT
+========================================= */
+
+.wa-tool-result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-width: 0;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.wa-tool-result-content > label {
+  color: #e8dff5;
+}
+
+.wa-tool-result-content input {
+  height: 49px;
+  padding: 0 13px;
+  color: #31213f;
+  background: #ffffff;
+  border-color: transparent;
+  text-overflow: ellipsis;
+}
+
+.wa-tool-copy {
+  width: 100%;
+  min-height: 47px;
+  padding: 10px 16px;
+  color: #ffffff;
+  background: #8252de;
+  border: 1px solid #8252de;
+  border-radius: 10px;
+}
+
+.wa-tool-copy:hover {
+  background: #9465ec;
+}
+
+.wa-tool-open {
+  width: 100%;
+  min-height: 47px;
+  padding: 10px 16px;
+  color: #f0e6ff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+}
+
+.wa-tool-open:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* =========================================
+   RESULT FOOTER
+========================================= */
+
+.wa-tool-result-footer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+  color: #c6b4da;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.wa-tool-result-footer svg {
+  flex-shrink: 0;
+  color: #b7e6c6;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 950px) {
+  .wa-tool-page {
+    padding: 95px 0 80px;
+  }
+
+  .wa-tool-layout {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .wa-tool-header {
+    margin-bottom: 38px;
+  }
+
+  .wa-tool-result-card {
+    min-height: 360px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .wa-tool-page {
+    padding: 85px 0 65px;
+  }
+
+  .wa-tool-container {
+    padding: 0 18px;
+  }
+
+  .wa-tool-header {
+    margin-bottom: 30px;
+  }
+
+  .wa-tool-eyebrow {
+    margin-bottom: 13px;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+  }
+
+  .wa-tool-header h1 {
+    margin-bottom: 14px;
+    font-size: clamp(32px, 9vw, 42px);
+    letter-spacing: -1.5px;
+  }
+
+  .wa-tool-header p {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .wa-tool-layout {
+    gap: 20px;
+  }
+
+  .wa-tool-card,
+  .wa-tool-result-card {
+    padding: 24px 20px;
+    border-radius: 17px;
+  }
+
+  .wa-tool-card-heading {
+    gap: 12px;
+    margin-bottom: 27px;
+  }
+
+  .wa-tool-icon {
+    width: 45px;
+    height: 45px;
+    flex-basis: 45px;
+  }
+
+  .wa-tool-card-heading h2 {
+    font-size: 18px;
+  }
+
+  .wa-tool-card-heading p {
+    font-size: 11px;
+  }
+
+  .wa-tool-card form {
+    gap: 21px;
+  }
+
+  .wa-tool-field select,
+  .wa-tool-field input {
+    height: 49px;
+  }
+
+  .wa-tool-field textarea {
+    min-height: 120px;
+  }
+
+  .wa-tool-generate {
+    font-size: 11px;
+    gap: 7px;
+  }
+
+  .wa-tool-result-heading {
+    margin-bottom: 28px;
+  }
+
+  .wa-tool-result-card > h2 {
+    font-size: 27px;
+  }
+
+  .wa-tool-result-card > p {
+    font-size: 12px;
+  }
+
+  .wa-tool-empty-state {
+    min-height: 170px;
+  }
+
+  .wa-tool-result-content {
+    padding: 15px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.wa-tool-page button:focus-visible,
+.wa-tool-page a:focus-visible {
+  outline: 3px solid #b79af1;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-tool-page button,
+  .wa-tool-page a {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   GENERATE BUTTON LOADING STATE
+========================================= */
+
+.wa-tool-generate:disabled {
+  opacity: 0.8;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+.wa-tool-reset:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.wa-tool-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: wa-tool-spin 0.7s linear infinite;
+}
+
+.wa-tool-spinner-large {
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+  border-color: rgba(215, 195, 242, 0.25);
+  border-top-color: #d7c3f2;
+}
+
+@keyframes wa-tool-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-tool-spinner {
+    animation: none;
+    border-top-color: #ffffff;
+  }
+
+  .wa-tool-spinner-large {
+    border-top-color: #d7c3f2;
+  }
+}

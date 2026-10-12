@@ -1,0 +1,578 @@
+/* ==========================================
+   BEN CREATIONS — CONTACT
+========================================== */
+
+.ben-contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  padding: 105px 0 85px;
+  background: linear-gradient(
+    140deg,
+    #f9f6fe 0%,
+    #ffffff 52%,
+    #f3ebfc 100%
+  );
+  color: #241431;
+}
+
+.ben-contact,
+.ben-contact * {
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+
+.ben-contact-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ben-contact-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(126, 75, 185, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 75, 185, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 20%,
+    #000 80%,
+    transparent
+  );
+}
+
+.ben-contact-glow {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -180px;
+  right: -130px;
+  border-radius: 50%;
+  background: #e9d5ff;
+  filter: blur(100px);
+  opacity: 0.45;
+}
+
+.ben-contact-ring {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -280px;
+  left: -250px;
+  border: 1px solid rgba(142, 83, 204, 0.12);
+  border-radius: 50%;
+}
+
+/* CONTAINER */
+
+.ben-contact-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(35px, 5.5vw, 90px);
+}
+
+/* TOPLINE */
+
+.ben-contact-topline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 75px;
+  color: #8651bd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ben-contact-topline-rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(131, 75, 189, 0.2);
+}
+
+.ben-contact-topline span:last-child {
+  color: #a294ad;
+}
+
+/* MAIN LAYOUT */
+
+.ben-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(45px, 6vw, 95px);
+  align-items: start;
+}
+
+/* LEFT COLUMN */
+
+.ben-contact-intro {
+  min-width: 0;
+  padding-top: 25px;
+}
+
+.ben-contact-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #8f59c6;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.ben-contact-title {
+  margin: 0;
+  color: #241431;
+  font-size: clamp(45px, 5.4vw, 76px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.065em;
+}
+
+.ben-contact-title em {
+  color: #945bcf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.ben-contact-description {
+  max-width: 480px;
+  margin: 27px 0 35px;
+  color: #74677e;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* CONTACT DETAILS */
+
+.ben-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.ben-contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ben-contact-detail-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 49px;
+  border: 1px solid #e8d9f7;
+  border-radius: 12px;
+  background: #f1e7fc;
+  color: #8c53c7;
+  font-size: 20px;
+}
+
+.ben-contact-detail > div:last-child {
+  min-width: 0;
+}
+
+.ben-contact-detail > div:last-child > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #9b65ce;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.ben-contact-detail p,
+.ben-contact-detail a {
+  margin: 0;
+  color: #3c2c48;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ben-contact-detail a:hover {
+  color: #8d52c9;
+}
+
+/* WHATSAPP BUTTON */
+
+.ben-contact-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: 1px solid #8650c3;
+  border-radius: 8px;
+  background: #8e54ca;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ben-contact-whatsapp:not(.ben-contact-whatsapp-disabled):hover {
+  transform: translateY(-3px);
+  background: #7540b3;
+  box-shadow: 0 12px 26px rgba(114, 55, 172, 0.18);
+}
+
+.ben-contact-whatsapp-disabled {
+  background: #e9def3;
+  border-color: #e2d3ee;
+  color: #8c799d;
+  cursor: default;
+}
+
+.ben-contact-whatsapp svg {
+  font-size: 18px;
+}
+
+/* SOCIAL LINKS */
+
+.ben-contact-socials {
+  margin-top: 42px;
+}
+
+.ben-contact-socials > span {
+  display: block;
+  margin-bottom: 15px;
+  color: #9b8aa7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.ben-contact-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ben-contact-social-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #e5d8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #8750bf;
+  font-size: 19px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-contact-social-list a:hover {
+  background: #8e54ca;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* FORM CARD */
+
+.ben-contact-form-card {
+  min-width: 0;
+  padding: clamp(25px, 3vw, 40px);
+  border: 1px solid #e8ddf2;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 65px rgba(55, 23, 88, 0.075);
+}
+
+.ben-contact-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ben-contact-form-header > div:first-child > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #9359c9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.ben-contact-form-header h3 {
+  margin: 0;
+  color: #2b183a;
+  font-size: clamp(22px, 2.5vw, 29px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+}
+
+.ben-contact-form-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #f2e8fc;
+  color: #8d52c9;
+  font-size: 20px;
+}
+
+/* FORM */
+
+.ben-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.ben-contact-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.ben-contact-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.ben-contact-field label {
+  color: #3b2b48;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ben-contact-field label span {
+  color: #9c5cd5;
+}
+
+.ben-contact-field input,
+.ben-contact-field select,
+.ben-contact-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 15px;
+  border: 1px solid #e6ddec;
+  border-radius: 8px;
+  outline: none;
+  background: #fcfaff;
+  color: #30213b;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.ben-contact-field input,
+.ben-contact-field select {
+  min-height: 48px;
+}
+
+.ben-contact-field textarea {
+  min-height: 145px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.ben-contact-field input::placeholder,
+.ben-contact-field textarea::placeholder {
+  color: #aa9db3;
+}
+
+.ben-contact-field input:focus,
+.ben-contact-field select:focus,
+.ben-contact-field textarea:focus {
+  border-color: #a875dc;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(153, 91, 210, 0.1);
+}
+
+/* FORM ERROR */
+
+.ben-contact-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* SUBMIT BUTTON */
+
+.ben-contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 53px;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #8e54ca;
+  color: #ffffff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ben-contact-submit:hover {
+  background: #7540b3;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(114, 55, 172, 0.18);
+}
+
+.ben-contact-submit svg {
+  font-size: 20px;
+}
+
+.ben-contact-form-note {
+  margin: -7px 0 0;
+  color: #a092aa;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* FOCUS ACCESSIBILITY */
+
+.ben-contact a:focus-visible,
+.ben-contact button:focus-visible {
+  outline: 3px solid #9659d4;
+  outline-offset: 4px;
+}
+
+/* BOTTOM */
+
+.ben-contact-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 85px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(126, 73, 183, 0.17);
+  color: #a091ac;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .ben-contact-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .ben-contact-intro {
+    padding-top: 0;
+  }
+
+  .ben-contact-title {
+    font-size: clamp(50px, 7vw, 75px);
+  }
+
+  .ben-contact-form-card {
+    max-width: 800px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+  .ben-contact {
+    padding: 75px 0 65px;
+  }
+
+  .ben-contact-container {
+    padding: 0 20px;
+  }
+
+  .ben-contact-topline {
+    gap: 10px;
+    margin-bottom: 50px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .ben-contact-topline span:last-child {
+    display: none;
+  }
+
+  .ben-contact-layout {
+    gap: 38px;
+  }
+
+  .ben-contact-title {
+    font-size: clamp(43px, 10vw, 62px);
+  }
+
+  .ben-contact-description {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .ben-contact-form-card {
+    padding: 23px 19px;
+    border-radius: 13px;
+  }
+
+  .ben-contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .ben-contact-form-header h3 {
+    font-size: 23px;
+  }
+
+  .ben-contact-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 60px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ben-contact *,
+  .ben-contact *::before,
+  .ben-contact *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

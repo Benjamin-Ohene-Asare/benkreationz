@@ -1,0 +1,458 @@
+/* ==========================================
+   BEN CREATIONS — FOOTER
+========================================== */
+
+.ben-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0 0;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 5%,
+      rgba(117, 60, 183, 0.23),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #160d25 0%,
+      #1c102d 52%,
+      #110a1e 100%
+    );
+
+  color: #ffffff;
+}
+
+.ben-footer,
+.ben-footer * {
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+
+.ben-footer-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ben-footer-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -300px;
+  right: -130px;
+  border-radius: 50%;
+  background: #8d4dce;
+  opacity: 0.13;
+  filter: blur(100px);
+}
+
+.ben-footer-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(205, 166, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(205, 166, 255, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 75px 75px;
+  mask-image: linear-gradient(
+    to bottom,
+    #000,
+    transparent 90%
+  );
+}
+
+/* CONTAINER */
+
+.ben-footer-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(35px, 5.5vw, 90px);
+}
+
+/* CTA */
+
+.ben-footer-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding-bottom: 65px;
+}
+
+.ben-footer-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #bd91f0;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.ben-footer-cta h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+}
+
+.ben-footer-cta h2 em {
+  color: #c49af6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+.ben-footer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 22px;
+  min-height: 55px;
+  padding: 16px 24px;
+  border: 1px solid #a36ae6;
+  border-radius: 9px;
+  background: #8c49d2;
+  color: #ffffff;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ben-footer-cta-button:hover {
+  transform: translateY(-3px);
+  background: #a35ce9;
+  box-shadow: 0 12px 28px rgba(137, 65, 210, 0.25);
+}
+
+.ben-footer-cta-button svg {
+  font-size: 19px;
+}
+
+.ben-footer-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(221, 191, 255, 0.15);
+}
+
+/* MAIN GRID */
+
+.ben-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) repeat(3, minmax(0, 1fr));
+  gap: clamp(25px, 4vw, 65px);
+  padding: 65px 0 75px;
+}
+
+/* BRAND */
+
+.ben-footer-brand {
+  min-width: 0;
+}
+
+.ben-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.ben-footer-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #9b55e7, #6329ad);
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.ben-footer-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ben-footer-logo-text strong {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.ben-footer-logo-text small {
+  color: #c79af3;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.ben-footer-brand > p {
+  max-width: 310px;
+  margin: 24px 0 22px;
+  color: #b5a6c4;
+  font-size: 12px;
+  line-height: 1.95;
+}
+
+/* SOCIAL ICONS */
+
+.ben-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ben-footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  border: 1px solid rgba(207, 167, 255, 0.18);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #caa5f1;
+  font-size: 17px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-footer-socials a:hover {
+  transform: translateY(-3px);
+  background: #8c49d2;
+  color: #ffffff;
+}
+
+.ben-footer-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #caa5f1;
+  font-size: 12px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ben-footer-email:hover {
+  color: #ffffff;
+}
+
+/* LINK COLUMNS */
+
+.ben-footer-column {
+  min-width: 0;
+}
+
+.ben-footer-column h3 {
+  margin: 5px 0 25px;
+  color: #ffffff;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.ben-footer-column nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ben-footer-column nav a {
+  color: #b7a8c5;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.ben-footer-column nav a:hover {
+  color: #d3a7ff;
+  transform: translateX(4px);
+}
+
+.ben-footer-tools-note {
+  display: block;
+  margin-top: 22px;
+  color: #8e7a9f;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* BOTTOM BAR */
+
+.ben-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  min-height: 78px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(221, 191, 255, 0.15);
+}
+
+.ben-footer-bottom p {
+  margin: 0;
+  color: #9787a7;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.ben-footer-made {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ben-footer-made svg {
+  color: #c18aed;
+  font-size: 13px;
+}
+
+.ben-footer-back-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #cda7f5;
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.ben-footer-back-top:hover {
+  color: #ffffff;
+}
+
+/* FOCUS */
+
+.ben-footer a:focus-visible,
+.ben-footer button:focus-visible {
+  outline: 2px solid #d3a7ff;
+  outline-offset: 5px;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .ben-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px;
+  }
+
+  .ben-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .ben-footer-brand > p {
+    max-width: 450px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+  .ben-footer {
+    padding-top: 65px;
+  }
+
+  .ben-footer-container {
+    padding: 0 20px;
+  }
+
+  .ben-footer-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding-bottom: 45px;
+  }
+
+  .ben-footer-cta h2 {
+    font-size: clamp(38px, 9vw, 55px);
+  }
+
+  .ben-footer-cta-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ben-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 20px;
+    padding: 45px 0 55px;
+  }
+
+  .ben-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .ben-footer-column h3 {
+    margin-bottom: 20px;
+  }
+
+  .ben-footer-column nav {
+    gap: 14px;
+  }
+
+  .ben-footer-column nav a {
+    font-size: 11px;
+  }
+
+  .ben-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 23px 0 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ben-footer *,
+  .ben-footer *::before,
+  .ben-footer *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -48,7 +48,7 @@ export default function Navbar() {
           <span className="bc-brand-symbol">B.</span>
 
           <span className="bc-brand-text">
-            <strong>Ben Creations</strong>
+            <strong>BenKreations</strong>
             <small>CREATIVE PORTFOLIO</small>
           </span>
         </Link>

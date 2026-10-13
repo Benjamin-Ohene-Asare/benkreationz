@@ -1,0 +1,184 @@
+
+/* ==========================================
+   BENKREATIONS AI ENQUIRY FORM
+========================================== */
+
+.bk-ai-enquiry {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 22px 20px;
+  background: #fbfaff;
+  color: #241b32;
+  font-family: inherit;
+}
+
+.bk-ai-enquiry__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.bk-ai-enquiry__heading > button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e8dff3;
+  border-radius: 11px;
+  background: #fff;
+  color: #7840d8;
+  cursor: pointer;
+}
+
+.bk-ai-enquiry__heading > button:hover {
+  background: #f1eafb;
+}
+
+.bk-ai-enquiry__heading h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+  font-weight: 750;
+  color: #241b32;
+}
+
+.bk-ai-enquiry__heading p {
+  margin: 0;
+  font-size: 12px;
+  color: #746c80;
+}
+
+.bk-ai-enquiry form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bk-ai-enquiry form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #40334f;
+}
+
+.bk-ai-enquiry input,
+.bk-ai-enquiry select,
+.bk-ai-enquiry textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #e4dceb;
+  border-radius: 11px;
+  outline: none;
+  background: #fff;
+  color: #241b32;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.bk-ai-enquiry input,
+.bk-ai-enquiry select {
+  min-height: 44px;
+}
+
+.bk-ai-enquiry textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.bk-ai-enquiry input:focus,
+.bk-ai-enquiry select:focus,
+.bk-ai-enquiry textarea:focus {
+  border-color: #7840d8;
+  box-shadow: 0 0 0 3px rgba(120, 64, 216, 0.12);
+}
+
+.bk-ai-enquiry input:disabled,
+.bk-ai-enquiry select:disabled,
+.bk-ai-enquiry textarea:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.bk-ai-enquiry__error {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #f3c9c9;
+  border-radius: 10px;
+  background: #fff1f1;
+  color: #a32626;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.bk-ai-enquiry__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8748e1, #5927af);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.bk-ai-enquiry__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(120, 64, 216, 0.2);
+}
+
+.bk-ai-enquiry__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.bk-ai-enquiry__notice {
+  margin: -3px 0 0;
+  color: #81778d;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .bk-ai-enquiry {
+    padding: 18px 14px;
+  }
+
+  .bk-ai-enquiry__heading {
+    margin-bottom: 18px;
+  }
+
+  .bk-ai-enquiry form {
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bk-ai-enquiry input,
+  .bk-ai-enquiry select,
+  .bk-ai-enquiry textarea,
+  .bk-ai-enquiry__submit {
+    transition: none;
+  }
+}

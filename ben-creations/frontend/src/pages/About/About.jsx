@@ -226,9 +226,9 @@ export default function About() {
         {/* STRENGTHS */}
         <section className="bc-about-section">
           <div className="bc-about-section-heading">
-            <span className="bc-about-section-kicker">
+            {/* <span className="bc-about-section-kicker">
               02 / WHAT I BRING
-            </span>
+            </span> */}
 
             <h2>
               Technical thinking.
@@ -265,9 +265,9 @@ export default function About() {
         {/* PROJECT EXPERIENCE */}
         <section className="bc-about-section bc-about-experience">
           <div className="bc-about-section-heading">
-            <span className="bc-about-section-kicker">
+            {/* <span className="bc-about-section-kicker">
               03 / PROJECT EXPERIENCE
-            </span>
+            </span> */}
 
             <h2>
               Learning through

@@ -32,7 +32,7 @@ import "./TechStack.css";
 
 const toolGroups = [
   {
-    number: "01",
+  
     title: "Design & Visuals",
     description:
       "Creating compelling graphics, visual identities, and digital artwork.",
@@ -62,7 +62,7 @@ const toolGroups = [
   },
 
   {
-    number: "02",
+   
     title: "Video Editing & Motion",
     description:
       "Editing videos, crafting visual stories, and bringing creative ideas to life.",
@@ -82,7 +82,7 @@ const toolGroups = [
   },
 
   {
-    number: "03",
+   
     title: "AI Creation & Prompt Engineering",
     description:
       "Using generative AI, creative direction, and structured prompts to produce engaging visual content and cinematic videos.",
@@ -112,7 +112,7 @@ const toolGroups = [
   },
 
   {
-    number: "04",
+
     title: "Web & Development",
     description:
       "Developing responsive websites and functional digital experiences using modern web technologies.",
@@ -318,10 +318,6 @@ export default function TechStack() {
 
                 </div>
 
-                <FiArrowUpRight
-                  className="ben-stack-group-arrow"
-                  aria-hidden="true"
-                />
 
               </article>
             );
@@ -331,7 +327,7 @@ export default function TechStack() {
 
         {/* SECTION FOOTER */}
 
-        <div className="ben-stack-bottom">
+        {/* <div className="ben-stack-bottom">
 
           <span>
             DESIGN. AI. MOTION. DEVELOPMENT.
@@ -341,7 +337,7 @@ export default function TechStack() {
             ALWAYS EXPLORING. ALWAYS CREATING.
           </span>
 
-        </div>
+        </div> */}
 
       </div>
     </section>

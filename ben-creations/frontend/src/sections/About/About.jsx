@@ -94,7 +94,7 @@ export default function About() {
 
             <div className="ben-about-image-accent">
               <span>DESIGN WITH PURPOSE</span>
-              <span aria-hidden="true">↗</span>
+              {/* <span aria-hidden="true">↗</span> */}
             </div>
           </div>
 

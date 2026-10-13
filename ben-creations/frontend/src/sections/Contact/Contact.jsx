@@ -9,6 +9,8 @@ import {
   FiFacebook,
   FiYoutube,
 } from "react-icons/fi";
+import { submitContactEnquiry } from "../../api/api";
+
 
 import "./Contact.css";
 
@@ -47,6 +49,8 @@ export default function Contact() {
   });
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -59,42 +63,54 @@ export default function Contact() {
     if (error) setError("");
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
 
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      setError("Please complete the required fields.");
-      return;
-    }
+  
+const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    if (CONTACT_EMAIL === "hello@example.com") {
-      setError("Contact email has not been configured yet.");
-      return;
-    }
+  if (isSubmitting) return;
 
-    const subject = `New Ben Creations enquiry — ${form.service || "General"}`;
+  setError("");
+  setSuccess("");
 
-    const body = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      `Service: ${form.service || "Not specified"}`,
-      "",
-      "Message:",
-      form.message,
-    ].join("\n");
+  if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+    setError("Please complete the required fields.");
+    return;
+  }
 
-    const mailtoUrl =
-      `mailto:${CONTACT_EMAIL}` +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
+  setIsSubmitting(true);
 
-    window.location.href = mailtoUrl;
-  };
+  try {
+    const result = await submitContactEnquiry(form);
+
+    setSuccess(
+      result.message ||
+        "Your enquiry has been received successfully."
+    );
+
+    setForm({
+      name: "",
+      email: "",
+      service: "",
+      message: "",
+    });
+  } catch (err) {
+    setError(
+      err instanceof Error
+        ? err.message
+        : "Unable to send your enquiry. Please try again."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
 
   const whatsappUrl = WHATSAPP_NUMBER
     ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-        "Hello Ben Creations, I'd like to discuss a project."
-      )}`
+      "Hello Ben Creations, I'd like to discuss a project."
+    )}`
     : null;
 
   return (
@@ -310,15 +326,24 @@ export default function Contact() {
                   {error}
                 </p>
               )}
+              {success && (
+                <p className="ben-contact-success" role="status">
+                  {success}
+                </p>
+              )}
 
               <button
                 type="submit"
                 className="ben-contact-submit"
+                disabled={isSubmitting}
               >
-                Prepare Email
+                {isSubmitting ? "Sending..." : "Send Enquiry"}
                 <FiArrowUpRight aria-hidden="true" />
               </button>
 
+              <p className="ben-contact-form-note">
+                Your enquiry will be sent securely to Ben Creations.
+              </p>
               <p className="ben-contact-form-note">
                 This opens your email app with your enquiry prepared.
                 It does not submit your message directly.

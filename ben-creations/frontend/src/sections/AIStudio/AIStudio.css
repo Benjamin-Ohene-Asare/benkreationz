@@ -23,14 +23,14 @@
     pointer-events: none;
 }
 
-.ben-ai-grid {
+/* .ben-ai-grid {
     position: absolute;
     inset: 0;
     background-image: linear-gradient(rgba(192, 145, 255, .065) 1px, transparent 1px), linear-gradient(90deg, rgba(192, 145, 255, .065) 1px, transparent 1px);
     background-size: 65px 65px;
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 85%, transparent);
     mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 85%, transparent);
-}
+} */
 
 .ben-ai-glow {
     position: absolute;

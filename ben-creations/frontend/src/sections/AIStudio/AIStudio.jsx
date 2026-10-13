@@ -116,11 +116,11 @@ export default function AIStudio() {
 
       <div className="ben-ai-container">
         {/* SECTION TOPLINE */}
-        <div className="ben-ai-topline">
+        {/* <div className="ben-ai-topline">
           <span>04 / AI CREATIVE STUDIO</span>
           <span className="ben-ai-topline-rule" />
           <span>GENERATIVE VIDEO & STORYTELLING</span>
-        </div>
+        </div> */}
 
         {/* HEADER */}
         <div className="ben-ai-header">
@@ -222,10 +222,10 @@ export default function AIStudio() {
         </div>
 
         {/* FOOTER */}
-        <div className="ben-ai-bottom">
+        {/* <div className="ben-ai-bottom">
           <span>IMAGINATION WITHOUT LIMITS</span>
           <span>DESIGN • AI • STORYTELLING</span>
-        </div>
+        </div> */}
       </div>
 
       {/* VIDEO MODAL */}

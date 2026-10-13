@@ -1,0 +1,88 @@
+
+/* BENKREATIONS AI ASSISTANT PAGE */
+
+.bk-ai-page {
+  min-height: 100vh;
+  padding: 110px 24px 80px;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(135, 75, 220, 0.1),
+      transparent 42%
+    ),
+    #faf9fd;
+}
+
+.bk-ai-page__container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.bk-ai-page__intro {
+  max-width: 680px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.bk-ai-page__eyebrow {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: #7840d8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.bk-ai-page__intro h1 {
+  margin: 0 0 16px;
+  color: #21172e;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+}
+
+.bk-ai-page__intro h1 span {
+  color: #7840d8;
+}
+
+.bk-ai-page__intro p {
+  margin: 0 auto;
+  max-width: 560px;
+  color: #716b7b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.bk-ai-page__chat {
+  height: min(680px, 75vh);
+  min-height: 420px;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 22px 65px rgba(46, 24, 78, 0.09);
+  border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+  .bk-ai-page {
+    padding: 95px 14px 50px;
+  }
+
+  .bk-ai-page__intro {
+    margin-bottom: 24px;
+  }
+
+  .bk-ai-page__intro h1 {
+    letter-spacing: -0.7px;
+  }
+
+  .bk-ai-page__intro p {
+    font-size: 13px;
+  }
+
+  .bk-ai-page__chat {
+    height: min(650px, 70dvh);
+    min-height: 390px;
+  }
+}

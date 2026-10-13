@@ -1,0 +1,359 @@
+
+/* ==============================
+   BENKREATIONS AI ASSISTANT
+================================ */
+
+.bk-ai {
+  --bk-purple: #7840d8;
+  --bk-purple-dark: #5927af;
+  --bk-border: #e9e4f0;
+  --bk-text: #201a2c;
+  --bk-muted: #746c80;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+  color: var(--bk-text);
+  border: 1px solid var(--bk-border);
+  border-radius: 20px;
+  font-family: inherit;
+}
+
+/* HEADER */
+
+.bk-ai__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 20px;
+  background: linear-gradient(
+    125deg,
+    var(--bk-purple),
+    var(--bk-purple-dark)
+  );
+  color: #fff;
+}
+
+.bk-ai__avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.bk-ai__heading {
+  min-width: 0;
+  flex: 1;
+}
+
+.bk-ai__heading h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 750;
+  color: #fff;
+}
+
+.bk-ai__heading p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.bk-ai__status {
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* CONVERSATION */
+
+.bk-ai__messages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 17px;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 22px 18px;
+  background: #fbfaff;
+  overscroll-behavior: contain;
+}
+
+.bk-ai__message {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  max-width: 92%;
+}
+
+.bk-ai__message--user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.bk-ai__message-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: #eee6fb;
+  color: var(--bk-purple);
+}
+
+.bk-ai__message--user .bk-ai__message-icon {
+  background: #e6dcfa;
+}
+
+.bk-ai__message p {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #eee9f4;
+  border-radius: 5px 15px 15px 15px;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bk-ai__message--user p {
+  border: none;
+  border-radius: 15px 5px 15px 15px;
+  background: var(--bk-purple);
+  color: #fff;
+}
+
+.bk-ai__typing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bk-muted);
+  font-size: 12px;
+}
+
+.bk-ai__spinner {
+  animation: bk-ai-spin 1s linear infinite;
+}
+
+@keyframes bk-ai-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MESSAGE INPUT */
+
+.bk-ai__composer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid var(--bk-border);
+  background: #fff;
+}
+
+.bk-ai__composer input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #e3dcea;
+  border-radius: 12px;
+  outline: none;
+  background: #faf9fc;
+  color: var(--bk-text);
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bk-ai__composer input:focus {
+  border-color: var(--bk-purple);
+  box-shadow: 0 0 0 3px rgba(120, 64, 216, 0.12);
+}
+
+.bk-ai__composer input::placeholder {
+  color: #968ca2;
+}
+
+.bk-ai__composer button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: var(--bk-purple);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.bk-ai__composer button:hover:not(:disabled) {
+  background: var(--bk-purple-dark);
+  transform: translateY(-1px);
+}
+
+.bk-ai__composer button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.bk-ai__composer button:focus-visible {
+  outline: 3px solid #c5a5fa;
+  outline-offset: 2px;
+}
+
+/* FOOTER */
+
+.bk-ai__footer {
+  padding: 0 14px 12px;
+  background: #fff;
+  color: var(--bk-muted);
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ACCESSIBILITY */
+
+.bk-ai__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 480px) {
+  .bk-ai__header {
+    padding: 14px;
+  }
+
+  .bk-ai__messages {
+    padding: 16px 12px;
+  }
+
+  .bk-ai__message p {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bk-ai__spinner {
+    animation: none;
+  }
+
+  .bk-ai__composer button,
+  .bk-ai__composer input {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   BENKREATIONS AI - START A PROJECT
+========================================== */
+
+.bk-ai__project-action {
+  display: flex;
+  padding: 12px 16px 4px;
+  background: #ffffff;
+}
+
+.bk-ai__project-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 18px;
+
+  border: 1px solid #7840d8;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #8748e1 0%,
+    #7840d8 50%,
+    #5927af 100%
+  );
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(120, 64, 216, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bk-ai__project-button svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.bk-ai__project-button:hover {
+  background: linear-gradient(
+    135deg,
+    #7840d8,
+    #5927af
+  );
+
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(120, 64, 216, 0.25);
+}
+
+.bk-ai__project-button:active {
+  transform: translateY(0);
+}
+
+.bk-ai__project-button:focus-visible {
+  outline: 3px solid #c5a5fa;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .bk-ai__project-action {
+    padding: 10px 12px 4px;
+  }
+
+  .bk-ai__project-button {
+    min-height: 44px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bk-ai__project-button {
+    transition: none;
+  }
+}

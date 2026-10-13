@@ -64,12 +64,12 @@ export default function Hero() {
             <div className="ben-hero-actions">
               <a href="#portfolio" className="ben-hero-primary">
                 Explore My Work
-                <span aria-hidden="true">↗</span>
+               
               </a>
 
               <a href="#about" className="ben-hero-secondary">
                 More About Me
-                <span aria-hidden="true">↗</span>
+              
               </a>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Hero() {
           <div className="ben-hero-details">
             <div className="ben-hero-info-card">
               <span className="ben-detail-label">
-                01 / WHAT I DO
+                 WHAT I DO
               </span>
 
               <div className="ben-detail-items">

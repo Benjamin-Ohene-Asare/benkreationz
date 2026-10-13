@@ -206,14 +206,14 @@ export default function Portfolio() {
       <div className="ben-portfolio-container">
 
         {/* TOPLINE */}
-
+{/* 
         <div className="ben-portfolio-topline">
           <span>03 / SELECTED WORK</span>
 
           <span className="ben-portfolio-rule" />
 
           <span>GRAPHIC DESIGN PORTFOLIO</span>
-        </div>
+        </div> */}
 
         {/* CENTERED HEADING */}
 
@@ -334,9 +334,9 @@ export default function Portfolio() {
         {/* FOOTER */}
 
         <div className="ben-portfolio-bottom">
-          <span>
+          {/* <span>
             DESIGN THAT COMMUNICATES & CONNECTS
-          </span>
+          </span> */}
 
           <span>
             {portfolioItems.length} SELECTED PROJECTS

@@ -222,7 +222,7 @@ REST_FRAMEWORK = {
     "DEFAULT_THROTTLE_RATES": {
         "anon": "30/hour",
         "user": "300/hour",
-        "ai_chat": "10/hour",
+        "ai_chat": "1000/hour",
     },
 }
 

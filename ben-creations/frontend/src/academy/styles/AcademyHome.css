@@ -1,0 +1,218 @@
+
+/* ==========================================
+   BENKREATIONS ACADEMY — HOME
+   Purple Brand Theme
+========================================== */
+
+.academy-home {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 680px;
+  padding: 110px 28px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(139, 65, 226, 0.34),
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #11091f 0%,
+      #281342 52%,
+      #4a2478 100%
+    );
+
+  color: #ffffff;
+}
+
+.academy-home::before,
+.academy-home::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(221, 180, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.academy-home::before {
+  top: 10%;
+  right: 7%;
+  width: 340px;
+  height: 340px;
+}
+
+.academy-home::after {
+  top: 18%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+}
+
+.academy-home__content {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.academy-home__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  margin-bottom: 25px;
+
+  border: 1px solid rgba(212, 166, 255, 0.28);
+  border-radius: 100px;
+  background: rgba(157, 80, 224, 0.13);
+
+  color: #e0b7ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.academy-home h1 {
+  max-width: 880px;
+  margin: 0 0 24px;
+
+  color: #ffffff;
+  font-size: clamp(38px, 5.8vw, 76px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2.8px;
+}
+
+.academy-home p {
+  max-width: 650px;
+  margin: 0;
+
+  color: #d8cbe5;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.85;
+}
+
+.academy-home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.academy-home__actions a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 25px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #773ac9;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.academy-home__actions a:hover {
+  background: #9150e4;
+  transform: translateY(-2px);
+}
+
+.academy-home__actions a:focus-visible {
+  outline: 3px solid #e1b8ff;
+  outline-offset: 4px;
+}
+
+.academy-home__actions a:nth-child(2) {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+.academy-home__actions a:nth-child(2):hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .academy-home {
+    min-height: 600px;
+    padding: 90px 24px;
+  }
+
+  .academy-home h1 {
+    letter-spacing: -1.8px;
+  }
+
+  .academy-home::before,
+  .academy-home::after {
+    opacity: 0.45;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .academy-home {
+    min-height: 560px;
+    padding: 75px 20px;
+  }
+
+  .academy-home__eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .academy-home h1 {
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.17;
+    letter-spacing: -1.3px;
+  }
+
+  .academy-home p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .academy-home__actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 30px;
+  }
+
+  .academy-home__actions a {
+    width: 100%;
+  }
+
+  .academy-home::before,
+  .academy-home::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .academy-home__actions a {
+    transition: none;
+  }
+
+  .academy-home__actions a:hover {
+    transform: none;
+  }
+}

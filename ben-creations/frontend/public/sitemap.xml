@@ -1,0 +1,31 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://benkreationz.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/about</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/portfolio</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/tools</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/tools/whatsapp-link</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/tools/qr-generator</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/ai-assistant</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/academy</loc>
+  </url>
+  <url>
+    <loc>https://benkreationz.vercel.app/academy/courses</loc>
+  </url>
+</urlset>
